@@ -1,0 +1,62 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 100vh;
+    background-image: url('../images/montersinc.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        padding: 5.6vw 2.6vw;
+
+        h3 {
+            font-size: 20px;
+            color: #302f2f;
+        }
+    }
+
+    &__content {
+        max-width: 640px;
+
+        &__branding {
+            max-width: 320px;
+            margin: 0 auto 38px;
+
+            img {
+                width: 300px;
+
+                @media (max-width: 768px) {
+                    width: 200px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+
+        .button {
+            margin-top: 2vw;
+            margin-bottom: 8px;
+            max-width: 65%;
+            display: inline-block;
+            &:hover {
+                background-color: variaveis.$corDeFundoBotaoSecundario;
+            }
+
+            @media (max-width: 768px) {
+                margin-top: 25vw;
+            }
+
+            a {
+                color: variaveis.$corTextoSecundario;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 700;
+            }
+        }
+    }
+
+
+}
